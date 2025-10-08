@@ -63,31 +63,44 @@
   inherits: false;
 }
 
-@utility after-gradient-border {
-  @apply absolute h-full w-[103%] p-5.5 px-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-10 bg-gradient-to-l from-primary to-secondary;
-  content: '';
-  /* animation: 3s spin linear infinite; */
-}
-
-@utility before-gradient-border {
-  @apply after-gradient-border;
-  filter: blur(1.5rem);
-  opacity: 0.25;
-}
-
 @keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-  to {
-    --angle: 360deg;
-  }
+  from { --angle: 0deg; }
+  to   { --angle: 360deg; }
 }
 
-@utility gradient-text {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
-}
+/* Components: styled button with animated gradient glow using ::before/::after */
+@layer components {
+  .styled-button {
+    @apply relative rounded-full inline-flex items-center justify-center overflow-visible;
+  }
 
-@utility gradient-border {
-  @apply after:after-gradient-border before:before-gradient-border
+  .styled-button::before,
+  .styled-button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(var(--angle), rgb(var(--primary)), rgb(var(--secondary)));
+    animation: spin 3s linear infinite;
+  }
+
+  /* blurred outer glow */
+  .styled-button::before {
+    filter: blur(1.5rem);
+    opacity: 0.9;
+  }
+
+  /* sharper inner glow/border */
+  .styled-button::after {
+    opacity: 1;
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
+  }
 }

@@ -1,4 +1,4 @@
-import { Background } from "../components/Background"
+import { Background } from "../components/GradientBackground"
 import { Navbar } from "../components/Navbar"
 
 export const Home = () => {

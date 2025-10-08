@@ -64,7 +64,7 @@
 }
 
 @utility after-gradient-border {
-  @apply absolute h-full w-[103%] p-5.5 px-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-10 bg-gradient-to-l from-primary to-secondary;
+  @apply absolute h-full w-full p-5.5 px-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-1 bg-gradient-to-r from-primary to-secondary;
   content: '';
   /* animation: 3s spin linear infinite; */
 }
@@ -90,4 +90,48 @@
 
 @utility gradient-border {
   @apply after:after-gradient-border before:before-gradient-border
+}
+
+/* Replace the pseudo-utility approach with explicit component rules so the
+   rotating gradient is visible only around the element (as a ring). The
+   ::before element provides the animated gradient glow, and ::after covers
+   the center with the element background so only the border shows. */
+@layer components {
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .gradient-border {
+    position: relative;
+    z-index: 0; /* ensure pseudo-elements sit behind content */
+    border-radius: 9999px; /* matches rounded-full */
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* make the gradient ring slightly larger than the element */
+    width: calc(100% + 28px);
+    height: calc(100% + 28px);
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), rgb(var(--primary)), rgb(var(--secondary)));
+    filter: blur(10px);
+    z-index: -2;
+    animation: spin 3s linear infinite;
+    pointer-events: none;
+  }
+
+  /* cover the center so the gradient appears only as a border */
+  .gradient-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--color-background);
+    z-index: -1;
+    pointer-events: none;
+  }
 }

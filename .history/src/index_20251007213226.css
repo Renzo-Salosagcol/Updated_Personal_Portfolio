@@ -64,15 +64,16 @@
 }
 
 @utility after-gradient-border {
-  @apply absolute h-full w-[103%] p-5.5 px-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-10 bg-gradient-to-l from-primary to-secondary;
+  @apply absolute h-full w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-1 bg-gradient-to-r from-primary to-secondary;
   content: '';
-  /* animation: 3s spin linear infinite; */
+  background-image: conic-gradient(rgb(var(--primary)) 0deg, rgb(var(--secondary)) 180 deg)
+  animation: 3s spin linear infinite;
 }
 
 @utility before-gradient-border {
   @apply after-gradient-border;
   filter: blur(1.5rem);
-  opacity: 0.25;
+  opacity: 0.5;
 }
 
 @keyframes spin {
@@ -89,5 +90,5 @@
 }
 
 @utility gradient-border {
-  @apply after:after-gradient-border before:before-gradient-border
+  @apply rounded-full after:after-gradient-border before:before-gradient-border z-1
 }

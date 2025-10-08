@@ -64,7 +64,7 @@
 }
 
 @utility after-gradient-border {
-  @apply absolute h-full w-[103%] p-5.5 px-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-10 bg-gradient-to-l from-primary to-secondary;
+  @apply absolute h-full w-full p-8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-1 bg-gradient-to-r from-primary to-secondary;
   content: '';
   /* animation: 3s spin linear infinite; */
 }

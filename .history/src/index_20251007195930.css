@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Light Theme */
+  :root {
+    --background: 248,248,255; /* Ghost White */
+    --foreground: 8,8,8; /* Vampire Black */
+
+    --primary:
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}

@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Light Theme */
+  :root {
+    --background: 248,248,255; /* Ghost White */
+    --foreground: 8,8,8; /* Vampire Black */
+
+    --primary: 0,0,205; /* Medium Blue */
+    --secondary: 186,85,211; /* Medium Orchid */
+  }
+
+  .dark {
+    --background: 8,8,8; /* Vampire Black */
+    --foreground: 248,248,255; /* Ghost White */
+
+    --primary: 0,128,0; /* Green */
+    --secondary: 254,254,34; /* Laser Lemon */
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
