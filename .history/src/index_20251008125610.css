@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+}
+
+@layer base {
+  /* Light Theme */
+  :root {
+    --background: #f8f8ff; /* Ghost White */
+    --foreground: #080808; /* Vampire Black */
+
+    --primary: #0000cd; /* Medium Blue */
+    --secondary: #ba55d3; /* Medium Orchid */
+  }
+
+  /* Dark Theme */
+  .dark {
+    --background: #080808; /* Vampire Black */
+    --foreground: #f8f8ff; /* Ghost White */
+
+    --primary: #008000; /* Green */
+    --secondary: #fefc22; /* Laser Lemon */
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+
+  @property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+  @media (min-width: 1536px) {
+    max-width: 1536px;
+  }
+}
+
+@utility after-gradient-border {
+  @apply absolute h-full w-[103%] p-5.5 px-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-10 bg-linear-[90deg] from-primary to-secondary;
+  content: '';
+  /* animation: 3s spin linear infinite; */
+}
+
+@utility before-gradient-border {
+  @apply after-gradient-border;
+  filter: blur(1.5rem);
+  opacity: 0.25;
+}
+
+@keyframes spin {
+  from {
+    --gradient-angle: 0deg;
+  }
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+@utility gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
+}
+
+@utility gradient-border {
+  @apply after:after-gradient-border before:before-gradient-border
+}
