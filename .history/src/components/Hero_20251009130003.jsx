@@ -16,7 +16,7 @@ export const Hero = () => {
           </div>
           <div>
             <img 
-            src="../../headshot.jpeg" 
+            src="../../public/headshot.jpeg" 
             alt="Headshot Photo"
             className="rounded-md w-32 h-32 object-cover"
             />

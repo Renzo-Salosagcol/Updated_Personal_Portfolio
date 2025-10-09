@@ -1,4 +1,4 @@
-import { ThemeToggle } from './ThemeToggle'
+
 
 const items = [
   { name: 'Home', href: '#home' },
@@ -18,7 +18,7 @@ export const Navbar = () => {
             <a href={item.href}>{item.name}</a>
           </li>
         ))}
-        <li><ThemeToggle /></li>
+        <li></li>
       </ul>
     </nav>
   )

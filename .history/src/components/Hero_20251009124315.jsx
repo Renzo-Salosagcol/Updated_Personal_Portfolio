@@ -9,14 +9,14 @@ export const Hero = () => {
             <h1 className="text-lg md:text-xl lg:text-2xl">
               <span className="gradient-text">Hello! </span>
               My Name is
-              <span className="gradient-text"> Renzo Salosagcol</span>
+              <span className="gradient-text">Renzo Salosagcol</span>
             </h1>
+            <h1 className="gradient-text text-lg md:text-xl lg:text-2xl">Renzo Salosagcol</h1>
             <h1 className="text-lg md:text-xl lg:text-2xl">I am a <span className="gradient-text">Full-Stack Web Developer</span></h1>
-            <h3 className="w-md md:w-lg lg:w-xl">Problem solving and critical thinking are some of my favorite and most rewarding activities. Coding is a way for me to express my creativity and bring ideas to life while consistently approaching and adapting to new challenges.</h3>
           </div>
           <div>
             <img 
-            src="../../headshot.jpeg" 
+            src="../../public/headshot.jpeg" 
             alt="Headshot Photo"
             className="rounded-md w-32 h-32 object-cover"
             />
