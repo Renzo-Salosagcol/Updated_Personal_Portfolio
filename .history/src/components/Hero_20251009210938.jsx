@@ -12,18 +12,14 @@ export const Hero = () => {
               <span className="gradient-text"> Renzo Salosagcol</span>
             </h1>
             <h1 className="text-lg md:text-xl lg:text-2xl">I am a <span className="gradient-text">Full-Stack Web Developer</span></h1>
-            <h3 className="w-md md:w-lg lg:w-xl text-sm">
-              <span className="font-bold">Problem solving</span> and
-              <span className="font-bold"> critical thinking </span>
-              are some of my favorite and most rewarding activities. Coding is a way for me to express my creativity and bring ideas to life while consistently approaching and adapting to new challenges.
-            </h3>
+            <h3 className="w-md md:w-lg lg:w-xl text-sm">Problem solving and critical thinking are some of my favorite and most rewarding activities. Coding is a way for me to express my creativity and bring ideas to life while consistently approaching and adapting to new challenges.</h3>
             <h3 className="w-md md:w-lg lg:w-xl text-sm">Want to learn more about me?  
               <span className="gradient-text"> Click on the button</span> below or 
               <span className="gradient-text"> keep scrolling</span> to learn more!
             </h3>
             <a 
               href="#about"
-              className="relative"
+              className="relative hover:cursor-pointer"
             >
               <GradientButton content="Learn more..." />
             </a>

@@ -86,7 +86,7 @@
 }
 
 @utility gradient-button {
-  @apply after:after-gradient-border after:w-[103%] before:before-gradient-border gradient-text z-0;
+  @apply after:after-gradient-border after:w-[103%] before:before-gradient-border gradient-text;
 }
 
 @utility gradient-button-inner {

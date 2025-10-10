@@ -70,7 +70,7 @@
 }
 
 @utility after-gradient-border {
-  @apply absolute h-[101.5%] w-[100.5%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md -z-10 bg-gradient-to-l from-primary to-secondary;
+  @apply absolute h-[101%] w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md -z-10 bg-gradient-to-l from-primary to-secondary;
   content: '';
   /* animation: 3s spin linear infinite; */
 }
@@ -81,16 +81,16 @@
   opacity: 0.5;
 }
 
+@utility after-gradient-button {
+  @apply absolute h-[107%] w-[102%] rounded-full bg-gradient-to-l from-primary to-secondary -z-1;
+}
+
 @utility gradient-text {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary transition-colors duration-300;
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
 }
 
 @utility gradient-button {
-  @apply after:after-gradient-border after:w-[103%] before:before-gradient-border gradient-text z-0;
-}
-
-@utility gradient-button-inner {
-  @apply flex h-full w-full items-center justify-center rounded-full bg-background gradient-text z-10
+  @apply relative flex justify-center items-center py-[1em] px-[2em] bg-background/70 border-none gradient-text after:after-gradient-button hover:scale-[105%]
 }
 
 @utility gradient-border {

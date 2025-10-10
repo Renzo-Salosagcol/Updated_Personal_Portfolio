@@ -86,11 +86,11 @@
 }
 
 @utility gradient-button {
-  @apply after:after-gradient-border after:w-[103%] before:before-gradient-border gradient-text z-0;
+  @apply flex justify-center items-center rounded-full py-[1em] px-[2em] bg-gradient-to-l from-primary to-secondary hover:cursor-pointer;
 }
 
 @utility gradient-button-inner {
-  @apply flex h-full w-full items-center justify-center rounded-full bg-background gradient-text z-10
+  @apply flex h-full w-full items-center justify-center rounded-full bg-red-900 gradient-text z-10
 }
 
 @utility gradient-border {
