@@ -5,7 +5,7 @@ const experiences = [
     name: "Education",
     icon: GraduationCap,
     role: "Bachelor of Science in Computer Science",
-    description: "Description",
+    description: "",
     link: "https://example.com/education"
   },
   {
@@ -38,8 +38,8 @@ export const About = () => {
                 <experience.icon className="w-full h-full rounded-full" />
               </div>
               <div>
-                <h2 className="font-semibold gradient-text text-xl">{experience.name}</h2>
-                <h4 className="font-bold">{experience.role}</h4>
+                <h2 className="font-semibold gradient-text">{experience.name}</h2>
+                <h3 className="font-bold"></h3>
                 <p className="text-sm md:text-md lg:text-lg">
                   {experience.description}
                 </p>

@@ -94,7 +94,7 @@
 }
 
 @utility gradient-border {
-  @apply relative after:after-gradient-border before:before-gradient-border z-0 bg-background
+  @apply relative after:after-gradient-border before:before-gradient-border z-0
 }
 
 @utility glassmorphism {

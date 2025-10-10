@@ -4,21 +4,18 @@ const experiences = [
   {
     name: "Education",
     icon: GraduationCap,
-    role: "Bachelor of Science in Computer Science",
-    description: "Description",
+    description: "I have a degree in Computer Science from the University of Example.",
     link: "https://example.com/education"
   },
   {
     name: "Work Experience",
     icon: Briefcase,
-    role: "Operations Associate",
     description: "I have 5 years of experience in software development.",
     link: "https://example.com/work-experience"
   },
   {
     name: "Personal",
     icon: User,
-    role: "Hobbies & Interests",
     description: "I enjoy hiking, photography, and learning new technologies.",
     link: "https://example.com/personal"
   }
@@ -34,12 +31,11 @@ export const About = () => {
         {experiences.map((experience, index) => (
           <div className="z-0 relative gradient-border after:w-[92%] after:h-[105%] before:w-[92%] before:h-[105%] mb-6 animate-fade-in" key={index}>
             <div className="w-full h-full relative container flex flex-cols md:flex-rows rounded-md p-6 bg-background gap-6">
-              <div className="w-10 h-10 my-auto items-center justify-center">
-                <experience.icon className="w-full h-full rounded-full" />
+              <div className="w-10 h-10 rounded-full items-center">
+                <experience.icon className="w-full h-full rounded-fullgradient-text" />
               </div>
               <div>
-                <h2 className="font-semibold gradient-text text-xl">{experience.name}</h2>
-                <h4 className="font-bold">{experience.role}</h4>
+                <h2 className="font-semibold gradient-text">{experience.name}</h2>
                 <p className="text-sm md:text-md lg:text-lg">
                   {experience.description}
                 </p>
