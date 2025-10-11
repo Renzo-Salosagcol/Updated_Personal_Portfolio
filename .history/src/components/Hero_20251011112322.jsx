@@ -25,8 +25,8 @@ export const Hero = () => {
               href="#about"
               className="relative"
             >
-              <a href="#about" className="gradient-card gradient-text cursor-pointer flex items-center justify-center">
-                <button className="">
+              <a>
+                <button className="gradient-card gradient-text rounded-full cursor-pointer">
                   Learn more...
                 </button>
               </a>

@@ -70,14 +70,14 @@
 }
 
 @utility gradient-card {
-  @apply relative mx-auto h-full w-full rounded-md bg-background
-  p-2 after:after-gradient-card before:before-gradient-card;
+  @apply relative mx-auto h-full w-full rounded-md bg-white
+  p-2 after:after-gradient-card;
 }
 
 @utility after-gradient-card {
-  @apply absolute w-full h-full rounded-md top-1/2 left-1/2 -z-1 -translate-x-1/2 -translate-y-1/2 
-  bg-linear-to-l from-primary to-secondary p-4;
-  width: clamp(100%, 100.5%, 110%);
+  @apply absolute w-[102%] h-full rounded-md top-1/2 left-1/2 -z-1 -translate-x-1/2 -translate-y-1/2 
+  bg-linear-to-l from-blue-600 to-purple-600 p-6;
+  width: clamp(100%, 102.5%, 105% );
   content: "";
 }
 
