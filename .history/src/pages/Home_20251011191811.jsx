@@ -17,7 +17,7 @@ export const Home = () => {
       {/* Main */}
       <Hero />
       <About />
-      <Projects />
+      {/* <Projects /> */}
 
       {/* Footer */}
     </div>
