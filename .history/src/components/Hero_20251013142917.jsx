@@ -26,7 +26,7 @@ export const Hero = () => {
               className="cursor-pointer"
             >
                 <button className="gradient-card py-0 m-0 cursor-pointer">
-                  <h5 className="gradient-card-inner gradient-text p-2">Learn more...</h5>
+                  <h5 className="gradient-card-inner gradient-text bg-background p-0">Learn more...</h5>
                 </button>
             </a>
           </div>

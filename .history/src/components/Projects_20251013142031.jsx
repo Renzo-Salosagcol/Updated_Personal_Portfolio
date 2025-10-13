@@ -34,7 +34,7 @@ export const Projects = () => {
       </div>
       <div className="px-5 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {project_info.map((project) => (
-          <div key={project.id} className="gradient-card aspect-1/1">
+          <div key={project.id} className="gradient-card aspect-1/1 p-0">
             <div className="gradient-card-inner">
               <img src={project.image} alt={project.title} className="aspect-2/1 object-cover mb-4 rounded-[inherit]" />
               <h2 className="font-bold text-xl mb-2">{project.title}</h2>

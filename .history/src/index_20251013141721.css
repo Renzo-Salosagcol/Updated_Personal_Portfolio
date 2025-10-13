@@ -75,7 +75,7 @@
 }
 
 @utility gradient-card-inner {
-  @apply relative h-full w-full overflow-hidden p-4 bg-background rounded-[inherit];
+  @apply relative h-full w-full overflow-hidden p-2;
 }
 
 @utility gradient-card-shadow {

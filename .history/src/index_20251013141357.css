@@ -71,16 +71,16 @@
 
 @utility gradient-card {
   @apply relative mx-auto flex h-full w-full max-w-fit items-center justify-center
-  rounded-md bg-linear-to-l from-primary to-secondary p-0.5 before:gradient-card-shadow;
+  rounded-md bg-linear-to-l from-blue-600 to-purple-600 p-0.5 before:gradient-card-shadow;
 }
 
 @utility gradient-card-inner {
-  @apply relative h-full w-full overflow-hidden p-4 bg-background rounded-[inherit];
+  @apply relative h-full w-full overflow-hidden p-2;
 }
 
 @utility gradient-card-shadow {
   @apply absolute top-1/2 left-1/2 -z-1 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-md 
-  bg-linear-to-l from-primary to-secondary p-4;
+  bg-linear-to-l from-blue-600 to-purple-600 p-4;
   filter: blur(1.5rem);
   opacity: 0.3;
 }

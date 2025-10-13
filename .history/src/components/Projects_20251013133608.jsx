@@ -32,17 +32,15 @@ export const Projects = () => {
       <div className="flex items-center justify-center mb-12">
         <h1 className="font-bold">My <span className="gradient-text">Projects</span></h1>
       </div>
-      <div className="px-5 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="p-0 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {project_info.map((project) => (
           <div key={project.id} className="gradient-card aspect-1/1">
-            <div className="gradient-card-inner">
-              <img src={project.image} alt={project.title} className="aspect-2/1 object-cover mb-4 rounded-[inherit]" />
-              <h2 className="font-bold text-xl mb-2">{project.title}</h2>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <div className="flex items-center justify-between">
-                <a href={project.github_link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"><GithubIcon /></a>
-                <a href={project.external_link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"><ExternalLink /></a>
-              </div>
+            <img src={project.image} alt={project.title} className="aspect-2/1 object-cover mb-4" />
+            <h2 className="font-bold text-xl mb-2">{project.title}</h2>
+            <p className="text-gray-600 mb-4">{project.description}</p>
+            <div className="flex items-center justify-between"> 
+              <a href={project.github_link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"><GithubIcon /></a>
+              <a href={project.external_link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"><ExternalLink /></a>
             </div>
           </div>
         ))}

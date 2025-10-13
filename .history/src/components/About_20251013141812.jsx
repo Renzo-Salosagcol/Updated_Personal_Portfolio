@@ -32,7 +32,7 @@ export const About = () => {
       </div>
       <div className=" mx-auto max-w-6xl rounded-lg p-4 grid-cols-1 gap-6">
         {experiences.map((experience, index) => (
-          <div className="gradient-card mb-6 animate-fade-in" key={index}>
+          <div className="gradient-card after:w-[92%] after:h-[105%] before:w-[92%] before:h-[105%] mb-6 animate-fade-in" key={index}>
             <div className="gradient-card-inner container flex flex-cols md:flex-rows rounded-md bg-background gap-6">
               <div className="w-10 h-10 my-auto items-center justify-center">
                 <experience.icon className="w-full h-full rounded-full" />
