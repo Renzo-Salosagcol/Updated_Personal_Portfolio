@@ -1,3 +1,4 @@
+import GradientButton from "./GradientButton";
 
 export const Hero = () => {
   return (
