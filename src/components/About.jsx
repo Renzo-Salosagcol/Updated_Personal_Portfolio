@@ -1,26 +1,44 @@
 import { GraduationCap, Briefcase, User } from "lucide-react"
 
-const experiences = [
+const categories = [
   {
     name: "Education",
     icon: GraduationCap,
-    role: "Bachelor of Science in Computer Science",
-    description: "Description",
-    link: "https://example.com/education"
+    experiences: [{
+      location: "California State University, Fullerton",
+      role: "Bachelor of Science in Computer Science",
+      period: "2023 - 2025",
+      description: "Pursued a Bachelor's degree in Computer Science with a focus on Full-Stack Web Development." +
+      "Graduated in May 2025 with a strong foundation in software development principles and practices.",
+    },
+    {
+      location: "Orange Coast College",
+      role: "Transfer to CSU Fullerton for Computer Science",
+      period: "2019 - 2023",
+      description: "Began my college journey in 2019 as a Nursing Major before switching to Computer Science in 2021." +
+      "Completed my general education courses and major prerequisites to transfer to CSU Fullerton.",
+    }]
   },
   {
     name: "Work Experience",
     icon: Briefcase,
-    role: "Operations Associate",
-    description: "I have 5 years of experience in software development.",
-    link: "https://example.com/work-experience"
+    experiences: [ {
+      location: "Gucci Americas Inc.",
+      role: "Operations Associate",
+      period: "2024 - Present",
+      description: "Ensures the continued flow of inventory management and logistics operations within the store." +
+      "Collaborates with cross-functional teams to optimize supply chain processes and enhance overall efficiency.",
+    }]
   },
   {
     name: "Personal",
     icon: User,
-    role: "Hobbies & Interests",
-    description: "I enjoy hiking, photography, and learning new technologies.",
-    link: "https://example.com/personal"
+    experiences: [{
+      location: "Gucci Americas Inc.",
+      role: "Operations Associate",
+      period: "2024 - Present",
+      description: "I have 5 years of experience in software development.",
+    }]
   }
 ]
 
@@ -31,25 +49,26 @@ export const About = () => {
         <h1 className="font-bold"><span className="gradient-text">About </span> Me</h1>
       </div>
       <div className=" mx-auto max-w-6xl rounded-lg p-4 grid-cols-1 gap-6">
-        {experiences.map((experience, index) => (
+        {categories.map((category, index) => (
           <div className="gradient-card mb-6 animate-fade-in" key={index}>
             <div className="gradient-card-inner container flex flex-cols md:flex-rows rounded-md bg-background gap-6">
               <div className="w-10 h-10 my-auto items-center justify-center">
-                <experience.icon className="w-full h-full rounded-full" />
+                <category.icon className="w-full h-full rounded-full" />
               </div>
               <div>
-                <h2 className="font-semibold gradient-text text-xl">{experience.name}</h2>
-                <h4 className="font-bold">{experience.role}</h4>
-                <p className="text-sm md:text-md lg:text-lg">
-                  {experience.description}
-                </p>
-                <a
-                  href={experience.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                </a>
+                <h2 className="font-semibold gradient-text text-xl">{category.name}</h2>
+                <div>
+                  {category.experiences.map((experience, index) => (
+                    <div key={index} className="pt-3">
+                      <h4 className="items-left font-bold">{experience.location}</h4>
+                      <div className="flex flex-row justify-between">
+                        <h4 className="font-semibold">{experience.role}</h4>
+                        <h4 className="font-semibold">{experience.period}</h4>
+                      </div>
+                      <p className="">{experience.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
