@@ -56,7 +56,9 @@ export const About = () => {
                 <category.icon className="w-full h-full rounded-full" />
               </div>
               <div>
-                <h2 className="font-semibold gradient-text text-xl">{category.name}</h2>
+                <div>
+                  <h2 className="font-bold text-xl gradient-text max-w-fit">{category.name}</h2>
+                </div>
                 <div>
                   {category.experiences.map((experience, index) => (
                     <div key={index} className="pt-3">

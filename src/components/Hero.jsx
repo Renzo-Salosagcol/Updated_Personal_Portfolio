@@ -22,10 +22,10 @@ export const Hero = () => {
             </h3>
             <a 
               href="#about"
-              className="cursor-pointer"
+              className="w-fit"
             >
-                <button className="gradient-card py-0 m-0 cursor-pointer">
-                  <div className="gradient-card-inner">
+                <button className="gradient-button cursor-pointer">
+                  <div className="gradient-button-inner">
                     <h5 className="gradient-text p-2">Learn more...</h5>
                   </div>
                 </button>

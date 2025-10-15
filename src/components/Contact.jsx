@@ -9,7 +9,7 @@ export const Contact = () => {
       <div className=" mx-auto max-w-6xl rounded-lg gradient-card">
         <div className="gradient-card-inner grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col items-center gap-6">
-            <h2 className="text-xl">Follow Me on Social Media</h2>
+            <h2 className="text-xl font-semibold">Follow Me on Social Media</h2>
             <ul className="flex flex-col gap-6 text-lg items-left">
               <li className="flex items-left gap-4">
                 <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export const Contact = () => {
             </ul>
           </div>
           <div className="flex flex-col items-center gap-6">
-            <h2 className="text-xl">Send Me a Message</h2>
+            <h2 className="text-xl font-semibold">Send Me a Message</h2>
             <form>
               
             </form>
