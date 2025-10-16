@@ -1,18 +1,6 @@
-import { Facebook, Instagram, Twitter, Linkedin, Send } from "lucide-react"
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
 
 export const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    
-    setIsSubmitting(true)
-
-    setTimeout(() => {
-      alert("Message sent successfully!")
-      setIsSubmitting(false)
-    }, 1500)
-  }
   return (
     <section id="contact" className="relative min-h-screen py-12 flex flex-col justify-center">
       <div className="flex items-center justify-center mb-12">

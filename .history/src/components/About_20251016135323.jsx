@@ -8,14 +8,14 @@ const categories = [
       location: "California State University, Fullerton",
       role: "Bachelor of Science in Computer Science",
       period: "2023 - 2025",
-      description: "Pursued a Bachelor's degree in Computer Science with a focus on Full-Stack Web Development. " +
+      description: "Pursued a Bachelor's degree in Computer Science with a focus on Full-Stack Web Development." +
       "Graduated in May 2025 with a strong foundation in software development principles and practices.",
     },
     {
       location: "Orange Coast College",
       role: "Transfer to CSU Fullerton for Computer Science",
       period: "2019 - 2023",
-      description: "Began my college journey in 2019 as a Nursing Major before switching to Computer Science in 2021. " +
+      description: "Began my college journey in 2019 as a Nursing Major before switching to Computer Science in 2021." +
       "Completed my general education courses and major prerequisites to transfer to CSU Fullerton.",
     }]
   },
@@ -26,7 +26,7 @@ const categories = [
       location: "Gucci Americas Inc.",
       role: "Operations Associate",
       period: "2024 - Present",
-      description: "Ensures the continued flow of inventory management and logistics operations within the store. " +
+      description: "Ensures the continued flow of inventory management and logistics operations within the store." +
       "Collaborates with cross-functional teams to optimize supply chain processes and enhance overall efficiency.",
     }]
   },

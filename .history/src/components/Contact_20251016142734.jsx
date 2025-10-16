@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Linkedin, Send } from "lucide-react"
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
