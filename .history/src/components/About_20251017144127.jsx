@@ -36,17 +36,17 @@ const categories = [
       description: "Managed inventory and logistics operations to ensure efficient store functioning. " +
       "Worked closely with various departments to streamline processes and improve customer satisfaction.",
     }]
+  },
+  {
+    name: "Personal",
+    icon: User,
+    experiences: [{
+      location: "Gucci Americas Inc.",
+      role: "Operations Associate",
+      period: "2024 - Present",
+      description: "I have 5 years of experience in software development.",
+    }]
   }
-  // {
-  //   name: "Personal",
-  //   icon: User,
-  //   experiences: [{
-  //     location: "Gucci Americas Inc.",
-  //     role: "Operations Associate",
-  //     period: "2024 - Present",
-  //     description: "I have 5 years of experience in software development.",
-  //   }]
-  // }
 ]
 
 export const About = () => {

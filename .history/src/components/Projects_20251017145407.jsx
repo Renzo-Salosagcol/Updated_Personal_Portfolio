@@ -5,7 +5,7 @@ const project_info = [
     id: 1,
     title: "Guild Table",
     description: "Guild Table is a virtual tabletop web-based application designed for playing Dungeons & Dragons online with friends. " +
-    "Character creation and imports, interactive maps and tokens are some of its features that can be used to enhance the online DnD experience. ",
+    "Character creation and imports, interactive maps and tokens are some of its features. That can be used to enhance the online DnD experience. ",
     image: "https://yavuzceliker.github.io/sample-images/image-1.jpg",
     badges: ["Svelte", "TailwindCSS", "MongoDB", "Express"],
     github_link: "https://example.com/project-one",

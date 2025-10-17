@@ -5,7 +5,7 @@ const project_info = [
     id: 1,
     title: "Guild Table",
     description: "Guild Table is a virtual tabletop web-based application designed for playing Dungeons & Dragons online with friends. " +
-    "Character creation and imports, interactive maps and tokens are some of its features that can be used to enhance the online DnD experience. ",
+    "Character creation and imports, interactive maps and tokens are some of its features. That can be used to enhance the online DnD experience. ",
     image: "https://yavuzceliker.github.io/sample-images/image-1.jpg",
     badges: ["Svelte", "TailwindCSS", "MongoDB", "Express"],
     github_link: "https://example.com/project-one",
@@ -23,13 +23,12 @@ const project_info = [
   },
   {
     id: 3,
-    title: "Coming Soon",
-    description: "Continuous improvement and development of new projects is underway. Stay tuned for exciting updates and releases in the near future!",
+    title: "Project Three",
+    description: "This is a brief description of Project Three.",
     image: "https://yavuzceliker.github.io/sample-images/image-3.jpg",
-    badges: [],
-    github_link: "",
-    external_link: ""
-  }
+    badges: ["Angular", "Express", "Sass"],
+    github_link: "https://example.com/project-three",
+    external_link: "https://example.com/project-three-live"}
 ]
 
 export const Projects = () => {

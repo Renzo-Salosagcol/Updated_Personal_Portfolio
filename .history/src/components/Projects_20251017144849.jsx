@@ -5,31 +5,29 @@ const project_info = [
     id: 1,
     title: "Guild Table",
     description: "Guild Table is a virtual tabletop web-based application designed for playing Dungeons & Dragons online with friends. " +
-    "Character creation and imports, interactive maps and tokens are some of its features that can be used to enhance the online DnD experience. ",
+    "Character creation and imports, interactive maps and tokens are some of its features. That can be used to enhance the online DnD experience.",
     image: "https://yavuzceliker.github.io/sample-images/image-1.jpg",
-    badges: ["Svelte", "TailwindCSS", "MongoDB", "Express"],
+    badges: ["React", "Node.js", "CSS"],
     github_link: "https://example.com/project-one",
     external_link: ""
   },
   {
     id: 2,
-    title: "Yap Sessions",
-    description: "Yap Sessions is a web-based secure chat application that allows users to communicate in real-time. " +
-    "It features end-to-end encryption to ensure privacy and security of conversations.",
+    title: "Project Two",
+    description: "This is a brief description of Project Two.",
     image: "https://yavuzceliker.github.io/sample-images/image-2.jpg",
-    badges: ["NextJS", "ExpressJS", "HTML5", "CSS3"],
+    badges: ["Vue", "Firebase", "Tailwind CSS"],
     github_link: "https://example.com/project-two",
     external_link: "https://example.com/project-two-live"
   },
   {
     id: 3,
-    title: "Coming Soon",
-    description: "Continuous improvement and development of new projects is underway. Stay tuned for exciting updates and releases in the near future!",
+    title: "Project Three",
+    description: "This is a brief description of Project Three.",
     image: "https://yavuzceliker.github.io/sample-images/image-3.jpg",
-    badges: [],
-    github_link: "",
-    external_link: ""
-  }
+    badges: ["Angular", "Express", "Sass"],
+    github_link: "https://example.com/project-three",
+    external_link: "https://example.com/project-three-live"}
 ]
 
 export const Projects = () => {

@@ -1,5 +1,4 @@
 import { Facebook, Instagram, Twitter, Linkedin, Send } from "lucide-react"
-import { useState } from "react"
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -55,8 +54,8 @@ export const Contact = () => {
             </ul>
           </div>
           <div className="flex flex-col items-center gap-6">
-            <h2 className="text-xl font-semibold">Send Me A Message</h2>
-            <form className="space-y-6">
+            <h2 className="text-xl font-semibold">Send Me a Message</h2>
+            <form>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
                 <input

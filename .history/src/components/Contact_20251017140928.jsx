@@ -55,7 +55,7 @@ export const Contact = () => {
             </ul>
           </div>
           <div className="flex flex-col items-center gap-6">
-            <h2 className="text-xl font-semibold">Send Me A Message</h2>
+            <h2 className="text-xl font-semibold">Send Me a Message</h2>
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
@@ -91,7 +91,10 @@ export const Contact = () => {
               </div>
               <button type="submit"
                 disabled={isSubmitting}
-                className="cosmic-button w-full flex items-center justify-center gap-2"
+                className={cn(
+                  "cosmic-button w-full flex items-center justify-center gap-2",
+                  ""
+                )}
                 onClick={handleSubmit}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

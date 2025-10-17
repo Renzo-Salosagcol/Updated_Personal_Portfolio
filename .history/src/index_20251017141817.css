@@ -87,11 +87,11 @@
 
 @utility gradient-button {
   @apply relative h-full w-full max-w-fit p-0.5 items-center justify-center
-  bg-linear-to-l from-primary to-secondary rounded-full;
+  bg-linear-to-l from-blue-600 to-purple-600 rounded-full;
 }
 
 @utility gradient-button-inner {
-  @apply relative h-full w-full p-1 rounded-[inherit] bg-background;
+  @apply relative h-full w-full p-1 rounded-[inherit] bg-white;
 }
 
 @utility gradient-text {
@@ -99,7 +99,7 @@
 }
 
 @utility gradient-icon {
-  @apply bg-gradient-to-r from-primary to-secondary text-transparent;
+  color: red;
 }
 
 @utility glassmorphism {

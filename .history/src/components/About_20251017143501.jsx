@@ -23,30 +23,23 @@ const categories = [
     name: "Work Experience",
     icon: Briefcase,
     experiences: [ {
-      location: "Gucci",
+      location: "Gucci Americas Inc.",
       role: "Operations Associate",
       period: "2024 - Present",
       description: "Ensures the continued flow of inventory management and logistics operations within the store. " +
       "Collaborates with cross-functional teams to optimize supply chain processes and enhance overall efficiency.",
-    },
-    {
-      location: "Louis Vuitton",
+    }]
+  },
+  {
+    name: "Personal",
+    icon: User,
+    experiences: [{
+      location: "Gucci Americas Inc.",
       role: "Operations Associate",
-      period: "2021 - 2023",
-      description: "Managed inventory and logistics operations to ensure efficient store functioning. " +
-      "Worked closely with various departments to streamline processes and improve customer satisfaction.",
+      period: "2024 - Present",
+      description: "I have 5 years of experience in software development.",
     }]
   }
-  // {
-  //   name: "Personal",
-  //   icon: User,
-  //   experiences: [{
-  //     location: "Gucci Americas Inc.",
-  //     role: "Operations Associate",
-  //     period: "2024 - Present",
-  //     description: "I have 5 years of experience in software development.",
-  //   }]
-  // }
 ]
 
 export const About = () => {

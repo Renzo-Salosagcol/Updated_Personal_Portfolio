@@ -3,33 +3,30 @@ import { GithubIcon, ExternalLink } from "lucide-react"
 const project_info = [
   {
     id: 1,
-    title: "Guild Table",
-    description: "Guild Table is a virtual tabletop web-based application designed for playing Dungeons & Dragons online with friends. " +
-    "Character creation and imports, interactive maps and tokens are some of its features that can be used to enhance the online DnD experience. ",
+    title: "Project One",
+    description: "This is a brief description of Project One.",
     image: "https://yavuzceliker.github.io/sample-images/image-1.jpg",
-    badges: ["Svelte", "TailwindCSS", "MongoDB", "Express"],
+    badges: ["React", "Node.js", "CSS"],
     github_link: "https://example.com/project-one",
-    external_link: ""
+    external_link: "https://example.com/project-one-live"
   },
   {
     id: 2,
-    title: "Yap Sessions",
-    description: "Yap Sessions is a web-based secure chat application that allows users to communicate in real-time. " +
-    "It features end-to-end encryption to ensure privacy and security of conversations.",
+    title: "Project Two",
+    description: "This is a brief description of Project Two.",
     image: "https://yavuzceliker.github.io/sample-images/image-2.jpg",
-    badges: ["NextJS", "ExpressJS", "HTML5", "CSS3"],
+    badges: ["Vue", "Firebase", "Tailwind CSS"],
     github_link: "https://example.com/project-two",
     external_link: "https://example.com/project-two-live"
   },
   {
     id: 3,
-    title: "Coming Soon",
-    description: "Continuous improvement and development of new projects is underway. Stay tuned for exciting updates and releases in the near future!",
+    title: "Project Three",
+    description: "This is a brief description of Project Three.",
     image: "https://yavuzceliker.github.io/sample-images/image-3.jpg",
-    badges: [],
-    github_link: "",
-    external_link: ""
-  }
+    badges: ["Angular", "Express", "Sass"],
+    github_link: "https://example.com/project-three",
+    external_link: "https://example.com/project-three-live"}
 ]
 
 export const Projects = () => {
@@ -45,11 +42,6 @@ export const Projects = () => {
               <img src={project.image} alt={project.title} className="aspect-2/1 object-cover mb-4 rounded-[inherit]" />
               <h2 className="font-bold text-xl mb-2">{project.title}</h2>
               <p className="text-muted-foreground mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.badges.map((badge, index) => (
-                  <span key={index} className="bg-primary/20 text-primary px-2 py-1 rounded-full text-sm">{badge}</span>
-                ))}
-              </div>
               <div className="flex items-center justify-between">
                 <a href={project.github_link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline transition-colors duration-300"><GithubIcon /></a>
                 <a href={project.external_link} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline transition-colors duration-300"><ExternalLink /></a>
