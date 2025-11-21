@@ -4,19 +4,19 @@ export const Hero = () => {
     <main className="relative min-h-screen flex items-center justify-center max-w-10/12 rounded-md container z-0">
       <div className="gradient-card opacity-0 animate-fade-in">
         <div className="gradient-card-inner flex flex-col lg:flex-row items-center gap-4 rounded-md bg-background w-full">
-          <div className="flex flex-col gap-2 w-full break-words leading-tight">
+          <div className="flex flex-col gap-1 w-full break-words leading-tight">
             <h1 className="text-lg md:text-xl lg:text-2xl">
               <span className="gradient-text">Hello! </span>
               My Name is
               <span className="gradient-text"> Renzo Salosagcol</span>
             </h1>
             <h1 className="text-lg md:text-xl lg:text-2xl">I am a <span className="gradient-text">Full-Stack Web Developer</span></h1>
-            <h3 className="w-full md:w-lg lg:w-xl text-sm">
+            <h3 className="w-md md:w-lg lg:w-xl text-sm">
               <span className="font-bold">Problem solving</span> and
               <span className="font-bold"> critical thinking </span>
               are some of my favorite and most rewarding activities. Coding is a way for me to express my creativity and bring ideas to life while consistently approaching and adapting to new challenges.
             </h3>
-            <h3 className="w-full md:w-lg lg:w-xl text-sm">Want to learn more about me?  
+            <h3 className="w-md md:w-lg lg:w-xl text-sm">Want to learn more about me?  
               <span className="gradient-text"> Click on the button</span> below or 
               <span className="gradient-text"> keep scrolling</span> to learn more!
             </h3>

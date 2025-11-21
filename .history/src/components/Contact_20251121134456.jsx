@@ -77,7 +77,7 @@ export const Contact = () => {
                   placeholder="Hello, I would like to..."
                 />
               </div>
-              <div className="w-full flex justify-center">
+              <div className="w-full justify-center">
                 <button
                 type="submit"
                 disabled={isSubmitting}

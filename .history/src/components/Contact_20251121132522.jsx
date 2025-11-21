@@ -36,7 +36,7 @@ export const Contact = () => {
     }, 1500)
   }
   return (
-    <section id="contact" className="relative min-h-screen py-12 m-4 flex flex-col justify-center">
+    <section id="contact" className="relative min-h-screen py-12 pb-1000 m-4 flex flex-col justify-center">
       <div className="flex items-center justify-center mb-12">
         <h1 className="font-bold"><span className="gradient-text">Contact </span>Me</h1>
       </div>
@@ -77,7 +77,7 @@ export const Contact = () => {
                   placeholder="Hello, I would like to..."
                 />
               </div>
-              <div className="w-full flex justify-center">
+              <div className="w-full items-center">
                 <button
                 type="submit"
                 disabled={isSubmitting}
@@ -103,7 +103,7 @@ export const Contact = () => {
           </div>
           <div className="flex flex-col items-center gap-6">
             <h2 className="text-xl font-semibold">Follow Me on Social Media</h2>
-            <ul className="flex flex-col lg:flex-row gap-6 text-lg text-left">
+            <ul className="flex xs:flex-col lg:flex-row gap-6 text-lg items-left">
               {SOCIAL_MEDIA.map((platform) => (
                 <li key={platform.name}>
                   <a href={platform.link} target="_blank" rel="noopener noreferrer" className="flex flex-row items-left gap-2">

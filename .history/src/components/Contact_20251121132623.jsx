@@ -36,7 +36,7 @@ export const Contact = () => {
     }, 1500)
   }
   return (
-    <section id="contact" className="relative min-h-screen py-12 m-4 flex flex-col justify-center">
+    <section id="contact" className="relative min-h-screen py-12 pb-1000 m-4 flex flex-col justify-center">
       <div className="flex items-center justify-center mb-12">
         <h1 className="font-bold"><span className="gradient-text">Contact </span>Me</h1>
       </div>
@@ -77,7 +77,7 @@ export const Contact = () => {
                   placeholder="Hello, I would like to..."
                 />
               </div>
-              <div className="w-full flex justify-center">
+              <div className="w-full items-center">
                 <button
                 type="submit"
                 disabled={isSubmitting}

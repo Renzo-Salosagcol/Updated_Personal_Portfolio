@@ -77,7 +77,7 @@ export const Contact = () => {
                   placeholder="Hello, I would like to..."
                 />
               </div>
-              <div className="w-full flex justify-center">
+              <div className="w-full items-center">
                 <button
                 type="submit"
                 disabled={isSubmitting}
@@ -103,7 +103,7 @@ export const Contact = () => {
           </div>
           <div className="flex flex-col items-center gap-6">
             <h2 className="text-xl font-semibold">Follow Me on Social Media</h2>
-            <ul className="flex flex-col lg:flex-row gap-6 text-lg text-left">
+            <ul className="flex xs:flex-col lg:flex-row gap-6 text-lg items-left">
               {SOCIAL_MEDIA.map((platform) => (
                 <li key={platform.name}>
                   <a href={platform.link} target="_blank" rel="noopener noreferrer" className="flex flex-row items-left gap-2">
