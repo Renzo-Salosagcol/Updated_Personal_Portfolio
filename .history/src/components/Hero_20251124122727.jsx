@@ -1,7 +1,7 @@
 
 export const Hero = () => {
   return (
-    <main className="relative min-h-screen flex items-center w-full rounded-md container z-0 pt-20 md:pt-0">
+    <main className="relative min-h-screen flex items-center w-full rounded-md container z-0 ">
       <div className="gradient-card opacity-0 animate-fade-in">
         <div className="gradient-card-inner flex flex-col lg:flex-row justify-center gap-4 rounded-md bg-background w-full">
           <div className="flex flex-col gap-2 w-full">
