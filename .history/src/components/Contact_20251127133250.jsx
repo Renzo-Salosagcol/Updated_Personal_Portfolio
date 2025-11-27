@@ -99,7 +99,7 @@ export const Contact = () => {
               </div>
               <div className="flex items-center justify-center">
                 {!isFormCompleted && (
-                  <p className="text-red-500 text-sm">{errorMsg}</p>
+                  <p className="text-red-500 text-sm">{error_msg}</p>
                 )}
               </div>
               <div className="w-full flex justify-center">

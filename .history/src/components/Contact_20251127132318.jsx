@@ -13,7 +13,6 @@ const SOCIAL_MEDIA = [
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isFormCompleted, setIsFormCompleted] = useState(true);
-  const [errorMsg, setErrorMsg] = useState("");
   const form = useRef();
 
   const handleSubmit = (e) => {
@@ -24,13 +23,7 @@ export const Contact = () => {
     const message = document.getElementById('message').value;
 
     if (!name || !email || !message) {
-      setErrorMsg("Please complete all fields before submitting the form.");
-      setIsFormCompleted(false);
-      return;
-    }
-
-    if (email.indexOf('@') === -1) {
-      setErrorMsg("Please enter a valid email address.");
+      alert('Please fill in all fields before submitting the form.');
       setIsFormCompleted(false);
       return;
     }
@@ -50,8 +43,6 @@ export const Contact = () => {
           console.log('FAILED...', error.text);
         },
       );
-      setIsFormCompleted(true);
-      form.current.reset();
       setIsSubmitting(false)
     }, 1500)
   }
@@ -97,9 +88,9 @@ export const Contact = () => {
                   placeholder="Hello, I would like to..."
                 />
               </div>
-              <div className="flex items-center justify-center">
+              <div className="items-center">
                 {!isFormCompleted && (
-                  <p className="text-red-500 text-sm">{errorMsg}</p>
+                  <p className="text-red-500 text-sm">Please complete all fields before submitting the form.</p>
                 )}
               </div>
               <div className="w-full flex justify-center">
