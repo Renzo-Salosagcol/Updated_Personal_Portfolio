@@ -21,7 +21,7 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="max-sm:hidden z-50 p-2 rounded-full transition-color duration-300 focus:outline-hidden"
+      className="p-1 z-50 rounded-full transition-color duration-300 focus:outline-hidden hover:cursor-pointer"
     >
       {isDark ? (
         <Sun className="h-4 w-4 text-yellow-300" />

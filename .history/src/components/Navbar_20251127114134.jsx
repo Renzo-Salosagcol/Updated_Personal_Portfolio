@@ -30,7 +30,7 @@ export const Navbar = () => {
 
       {/* Mobile Navbar */}
       
-      <div className="flex md:hidden flex-row gap-2 ">
+      <div className="md:hidden">
         <ThemeToggle />
         <button 
           className="p-2 z-50 focus:outline-none text-foreground"

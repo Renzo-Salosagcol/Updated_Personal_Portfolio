@@ -9,9 +9,9 @@ const categories = [
       role: "Bachelor of Science in Computer Science",
       period: "2023 - 2025",
       description: [{
-        "1": "Pursued a Bachelor's degree in Computer Science with a focus on Full-Stack Web Development.",
-        "2": "Graduated in May 2025 with a strong foundation in software development principles and practices.",
-        "3": "Maintained a high GPA while balancing academic and extracurricular activities."
+        1: "Pursued a Bachelor's degree in Computer Science with a focus on Full-Stack Web Development.",
+        2: "Graduated in May 2025 with a strong foundation in software development principles and practices.",
+        3: "Maintained a high GPA while balancing academic and extracurricular activities."
       }]
     },
     {
@@ -19,10 +19,10 @@ const categories = [
       role: "Transfer to CSU Fullerton for Computer Science",
       period: "2019 - 2023",
       description: [{
-        "1": "Completed an Associate's degree with a focus on Computer Science coursework.",
+        1: "Completed an Associate's degree with a focus on Computer Science coursework.",
 
-        "2": "Began my college journey in 2019 as a Nursing Major before switching to Computer Science in 2021. ",
-        "3": "Completed my general education courses and major prerequisites to transfer to CSU Fullerton."
+        2: "Began my college journey in 2019 as a Nursing Major before switching to Computer Science in 2021. ",
+        3: "Completed my general education courses and major prerequisites to transfer to CSU Fullerton."
       }]
     }]
   },
@@ -34,14 +34,14 @@ const categories = [
       role: "Operations Controller",
       period: "2024 - Present",
       description: [{
-        "1": "Oversees stockroom accuracy & inventory integrity.",
-        "2": "Ensures clear and consistent communication between clients and and the company.",
-        "3": "Executes shipping, receiving, transfers, repairs, damages.",
-        "4": "Maintains compliance docs & security procedures.",
-        "5": "Supports team members with training & development.",
-        "6": "Drives process improvements for efficiency & accuracy.",
-        "7": "Leverages luxury retail ops knowledge for excellence.",
-        "8": "Embraces Gucci's culture of innovation & inclusion."
+        1: "Oversees stockroom accuracy & inventory integrity.",
+        2: "Ensures clear and consistent communication between clients and and the company.",
+        3: "Executes shipping, receiving, transfers, repairs, damages.",
+        4: "Maintains compliance docs & security procedures.",
+        5: "Supports team members with training & development.",
+        6: "Drives process improvements for efficiency & accuracy.",
+        7: "Leverages luxury retail ops knowledge for excellence.",
+        8: "Embraces Gucci's culture of innovation & inclusion."
       }]
     },
     {
@@ -49,10 +49,10 @@ const categories = [
       role: "Service Associate",
       period: "2024",
       description: [{
-        "1": "Creates loyal and lifelong member fans through upbeat and welcoming service.",
-        "2": "Ensures safety and cleanliness standards are consistently met throughout the facility.",
-        "3": "Utilizes MS Office and club systems to efficiently manage multiple tasks in a fast-paced environment.",
-        "4": "Demonstrates strong problem-solving skills, organization, optimism, and a team-focused attitude."
+        1: "Creates loyal and lifelong member fans through upbeat and welcoming service.",
+        2: "Ensures safety and cleanliness standards are consistently met throughout the facility.",
+        3: "Utilizes MS Office and club systems to efficiently manage multiple tasks in a fast-paced environment.",
+        4: "Demonstrates strong problem-solving skills, organization, optimism, and a team-focused attitude."
       }]
     },
     {
@@ -60,20 +60,30 @@ const categories = [
       role: "Operations Associate",
       period: "2021 - 2023",
       description: [{
-        "1": "Secures organized stock, inventory accuracy, flow.",
-        "2": "Supports client service with rapid BOH solutions.",
-        "3": "Handles repairs, after sales & alterations.",
-        "4": "Maintains facilities, systems, compliance, policy.",
-        "5": "Supports financial processes & documentation.",
-        "6": "Ensures adherence to brand standards & procedures.",
-        "7": "Problem-solving, proactive, detail-focused.",
-        "8": "Organized; drives continuous improvement.",
-        "9": "Leverages training; pursues luxury ops career growth.",
-        "10": "Embraces inclusive culture & brand heritage.",
+        1: "Secures organized stock, inventory accuracy, flow.",
+        2: "Supports client service with rapid BOH solutions.",
+        3: "Handles repairs, after sales & alterations.",
+        4: "Maintains facilities, systems, compliance, policy.",
+        5: "Supports financial processes & documentation.",
+        6: "Ensures adherence to brand standards & procedures.",
+        7: "Problem-solving, proactive, detail-focused.",
+        8: "Organized; drives continuous improvement.",
+        9: "Leverages training; pursues luxury ops career growth.",
+        10: "Embraces inclusive culture & brand heritage.",
     }]
     }
     ]
-  }
+  },
+  // {
+  //   name: "Personal",
+  //   icon: User,
+  //   experiences: [{
+  //     location: "Gucci Americas Inc.",
+  //     role: "Operations Associate",
+  //     period: "2024 - Present",
+  //     description: "I have 5 years of experience in software development.",
+  //   }]
+  // }
 ]
 
 export const About = () => {
@@ -99,11 +109,11 @@ export const About = () => {
                         <h4 className="font-semibold">{experience.role}</h4>
                         <h4 className="font-semibold">{experience.period}</h4>
                       </div>
-                      <ul className="list-disc pl-5">
+                      <ul>
                         {experience.description.map((desc, idx) => (
-                          Object.values(desc).map((text, textIdx) => (
-                            <li key={`${idx}-${textIdx}`} className="mt-2">{text}</li>
-                          ))
+                          typeof desc === 'string' ? (
+                            <li key={idx} className="mt-2">{desc}</li>
+                          ) : null
                         ))}
                       </ul>
                     </div>

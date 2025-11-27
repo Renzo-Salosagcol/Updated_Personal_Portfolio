@@ -99,7 +99,7 @@ export const About = () => {
                         <h4 className="font-semibold">{experience.role}</h4>
                         <h4 className="font-semibold">{experience.period}</h4>
                       </div>
-                      <ul className="list-disc pl-5">
+                      <ul className="list- list-disc">
                         {experience.description.map((desc, idx) => (
                           Object.values(desc).map((text, textIdx) => (
                             <li key={`${idx}-${textIdx}`} className="mt-2">{text}</li>

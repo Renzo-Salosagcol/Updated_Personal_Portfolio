@@ -29,31 +29,30 @@ export const Navbar = () => {
       </ul>
 
       {/* Mobile Navbar */}
-      
-      <div className="flex md:hidden flex-row gap-2 ">
-        <ThemeToggle />
-        <button 
-          className="p-2 z-50 focus:outline-none text-foreground"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}>
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
 
-      <div className={clsx("fixed md:hidden inset-0 flex flex-col items-center justify-center", 
-      "backdrop-blur-md transition-all duration-300 my-auto z-40 bg-background/80 text-foreground",
-      "min-h-screen min-w-screen mt-0",
+      <button 
+        className="md:hidden p-2 z-50 focus:outline-none text-foreground"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}>
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      <div className={clsx("fixed md:hidden inset-0 p-2 flex flex-col items-center justify-center", 
+      "backdrop-blur-md transition-all duration-300 my-auto z-40 bg-red-900 text-foreground",
+      "min-h-screen min-w-screen translate-y-50",
         isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       )}>
-          <ul className="flex flex-col gap-8 text-xl items-center">
-            {items.map(item => (
-              <li key={item.name}
-                className="hover:gradient-text transition-all duration-300 relative hover:gradient-card">
-                <a href={item.href}
-                onClick={() => setIsMenuOpen(false)}>{item.name}</a>
-              </li>
-            ))}
-          </ul>
+        <div className="flex flex-col gap-8 text-xl items-center">
+          {items.map((item, key) => (
+            <a key={key}
+              href={item.href}  
+              className="hover:gradient-text transition-all duration-300 relative hover:gradient-card"
+              onClick={() => setIsMenuOpen(false)}>
+              {item.name}
+            </a>
+          ))}
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   )

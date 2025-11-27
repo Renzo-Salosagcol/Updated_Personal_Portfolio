@@ -33,7 +33,7 @@ export const Navbar = () => {
       <div className="flex md:hidden flex-row gap-2 ">
         <ThemeToggle />
         <button 
-          className="p-2 z-50 focus:outline-none text-foreground"
+          className="p-2 z-50  text-foreground"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

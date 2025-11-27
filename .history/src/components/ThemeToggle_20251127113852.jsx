@@ -21,12 +21,12 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed max-sm:hidden z-50 p-2 rounded-full transition-color duration-300 focus:outline-hidden"
+      className=" p-1 z-50 rounded-full transition-color duration-300 focus:outline-hidden hover:cursor-pointer"
     >
       {isDark ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
+        <Sun className="h-4 w-4 text-yellow-300" />
       ) : (
-        <Moon className="h-6 w-6 text-blue-900" />
+        <Moon className="h-4 w-4 text-blue-900" />
       )}
     </button>
 
